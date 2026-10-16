@@ -1,0 +1,877 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Okba Tibermacine – Professor of Computer Science, ENSIA</title>
+<meta name="description" content="Okba Tibermacine is a Full Professor of Computer Science at the National School of Artificial Intelligence (ENSIA), Algiers. Research in software architecture, formal methods, service-oriented computing and LLM-based software engineering.">
+<meta name="author" content="Okba Tibermacine">
+<meta name="keywords" content="Okba Tibermacine, ENSIA, software engineering, formal methods, Maude, microservices, web services, LLM, requirements engineering, Algeria">
+<meta property="og:title" content="Okba Tibermacine – Professor of Computer Science, ENSIA">
+<meta property="og:description" content="Building service-based and AI-enabled software whose behaviour can be trusted.">
+<meta property="og:type" content="profile">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Okba Tibermacine",
+  "jobTitle": "Full Professor of Computer Science",
+  "affiliation": {"@type": "CollegeOrUniversity", "name": "National School of Artificial Intelligence (ENSIA)", "address": "Algiers, Algeria"},
+  "email": "mailto:okba.tibermacine@ensia.edu.dz",
+  "sameAs": [
+    "https://orcid.org/0000-0001-7779-1232",
+    "https://scholar.google.com/citations?user=MEUJ9kwAAAAJ"
+  ],
+  "knowsAbout": ["Software architecture", "Microservices", "Formal methods", "Rewriting logic", "Service-oriented computing", "LLM-based software engineering", "Trustworthy AI"]
+}
+</script>
+
+<style>
+:root {
+  --paper: #f4f6f7;
+  --surface: #ffffff;
+  --ink: #15242d;
+  --ink-soft: #4b5d68;
+  --rule: #d5dde1;
+  --teal: #1d6a73;
+  --teal-wash: #e0eef0;
+  --ochre: #a87a1f;
+  --ochre-wash: #f5ecd8;
+  --era-1: #7d93a3;
+  --era-2: #1d6a73;
+  --era-3: #5c8a5a;
+  --era-4: #a87a1f;
+  --era-5: #9b4d3f;
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --sans: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --measure: 68ch;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #10181d;
+    --surface: #16222a;
+    --ink: #e4ebee;
+    --ink-soft: #9db0ba;
+    --rule: #2a3a44;
+    --teal: #6fb9c1;
+    --teal-wash: #1a3238;
+    --ochre: #d9ab55;
+    --ochre-wash: #2e2717;
+    --era-1: #8ea5b5;
+    --era-2: #5fb0b8;
+    --era-3: #86b483;
+    --era-4: #d9ab55;
+    --era-5: #d07e6d;
+  }
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+}
+
+a { color: var(--teal); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; border-radius: 2px; }
+
+.skip { position: absolute; left: -9999px; }
+.skip:focus { left: 16px; top: 16px; background: var(--surface); padding: 8px 12px; z-index: 10; }
+
+/* ---------- Layout: fixed identity column + reading column ---------- */
+.page {
+  display: grid;
+  grid-template-columns: minmax(260px, 320px) 1fr;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.identity {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 56px 32px 32px 40px;
+  border-right: 1px solid var(--rule);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  overflow-y: auto;
+}
+
+.portrait {
+  width: 112px; height: 112px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--teal-wash);
+  color: var(--teal);
+  display: grid; place-items: center;
+  font-family: var(--serif);
+  font-size: 2.6rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.identity h1 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  margin: 0 0 8px;
+}
+.role { color: var(--ink-soft); margin: 0; line-height: 1.45; }
+
+.identity nav ul,
+.profiles { list-style: none; margin: 0; padding: 0; }
+.identity nav li a {
+  display: block;
+  padding: 5px 0 5px 14px;
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-left: 2px solid transparent;
+}
+.identity nav li a:hover { color: var(--ink); }
+.identity nav li a[aria-current="true"] { color: var(--ink); border-left-color: var(--teal); }
+
+.profiles { display: flex; flex-wrap: wrap; gap: 8px; }
+.profiles a {
+  display: inline-block;
+  padding: 4px 10px;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+.profiles a:hover { border-color: var(--teal); color: var(--teal); }
+.contact-line { color: var(--ink-soft); margin: 0; word-break: break-word; }
+
+main { padding: 56px 48px 96px 64px; min-width: 0; }
+
+/* ---------- Hero ---------- */
+.hero { max-width: 44rem; padding-bottom: 48px; }
+.question {
+  font-size: clamp(2rem, 4.2vw, 3.25rem);
+  line-height: 1.12;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin: 0 0 28px;
+  text-wrap: balance;
+}
+.question::before { content: "\201C"; color: var(--teal); margin-left: -0.45em; }
+.question::after { content: "\201D"; color: var(--teal); }
+.hero p { max-width: var(--measure); margin: 0 0 1em; }
+
+/* ---------- Sections ---------- */
+section { padding: 56px 0 8px; border-top: 1px solid var(--rule); scroll-margin-top: 16px; }
+h2 {
+  font-weight: 500;
+  font-size: 1.75rem;
+  letter-spacing: -0.01em;
+  margin: 0 0 24px;
+}
+h3 { font-weight: 600; font-size: 1.1875rem; margin: 32px 0 12px; }
+.lede { max-width: var(--measure); color: var(--ink-soft); margin: -12px 0 28px; }
+
+/* ---------- Trajectory band (the signature element) ---------- */
+.trajectory {
+  --years: 19; /* 2008 → 2026 inclusive */
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(var(--years), 1fr);
+  row-gap: 10px;
+  margin: 8px 0 12px;
+  padding-top: 28px;
+}
+.axis {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(var(--years), 1fr);
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+  position: absolute; top: 0; left: 0; right: 0;
+}
+.axis span { border-left: 1px solid var(--rule); padding-left: 4px; height: 100%; }
+.axis span:nth-child(even) { color: transparent; }
+
+.era {
+  position: relative;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  line-height: 1.3;
+  color: #fff;
+  background: var(--c);
+  min-height: 52px;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.era b { font-weight: 600; }
+.era small { opacity: 0.88; font-size: 0.8125rem; }
+.era.ongoing { border-top-right-radius: 0; border-bottom-right-radius: 0; }
+.era.ongoing::after {
+  content: "";
+  position: absolute; right: -14px; top: 0; bottom: 0; width: 14px;
+  background: linear-gradient(90deg, var(--c), transparent);
+}
+@media (prefers-color-scheme: dark) { .era { color: #0f171c; } }
+/* Short bar: label sits to the left of the bar, in ink colour */
+.era.label-out { padding: 0; }
+.era.label-out .lbl {
+  position: absolute; right: calc(100% + 12px); top: 50%; transform: translateY(-50%);
+  white-space: nowrap; text-align: right; color: var(--ink);
+  display: flex; flex-direction: column;
+}
+.era.label-out .lbl small { color: var(--ink-soft); opacity: 1; }
+
+.era-notes { display: grid; gap: 18px; margin-top: 32px; }
+.era-note {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 16px;
+  max-width: 56rem;
+}
+.era-note .yrs {
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+  padding-top: 3px;
+  border-left: 3px solid var(--c);
+  padding-left: 10px;
+}
+.era-note p { margin: 0; }
+
+/* ---------- News ---------- */
+.news { list-style: none; padding: 0; margin: 0; max-width: 52rem; }
+.news li {
+  display: grid; grid-template-columns: 7.5rem 1fr; gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px dashed var(--rule);
+}
+.news time { font-family: var(--sans); font-size: 0.875rem; color: var(--ink-soft); padding-top: 3px; }
+
+/* ---------- Publications ---------- */
+.pub-tools {
+  display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center;
+  margin-bottom: 20px;
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+}
+.filter { display: inline-flex; border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; }
+.filter button {
+  font: inherit; color: var(--ink-soft);
+  background: transparent; border: 0;
+  padding: 7px 14px; cursor: pointer;
+}
+.filter button + button { border-left: 1px solid var(--rule); }
+.filter button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.search {
+  font: inherit; color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--rule); border-radius: 8px;
+  padding: 7px 12px; min-width: 0; flex: 1 1 220px; max-width: 320px;
+}
+.count { color: var(--ink-soft); }
+
+.year-group h3 {
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  margin: 28px 0 4px;
+}
+.pubs { list-style: none; margin: 0; padding: 0; max-width: 54rem; }
+.pub {
+  display: grid;
+  grid-template-columns: 2.75rem 1fr;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.pub .tag {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 3px 0;
+  border-radius: 4px;
+  height: fit-content;
+  margin-top: 4px;
+}
+.pub[data-type="journal"] .tag { background: var(--teal-wash); color: var(--teal); }
+.pub[data-type="conference"] .tag { background: var(--ochre-wash); color: var(--ochre); }
+.pub[data-type="other"] .tag { background: transparent; color: var(--ink-soft); border: 1px solid var(--rule); }
+.pub .title { font-weight: 500; display: block; line-height: 1.35; }
+.pub .authors, .pub .venue { display: block; font-size: 1rem; color: var(--ink-soft); }
+.pub .authors strong { color: var(--ink); font-weight: 600; }
+.pub .authors u { text-decoration-color: var(--ochre); text-decoration-thickness: 1.5px; }
+.pub .venue em { color: var(--ink); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 6px; font-family: var(--sans); font-size: 0.875rem; }
+.badge { font-family: var(--sans); font-size: 0.8125rem; color: var(--ochre); margin-left: 4px; white-space: nowrap; }
+.pub[hidden], .year-group[hidden] { display: none; }
+.note { font-size: 0.9375rem; color: var(--ink-soft); max-width: var(--measure); margin-top: 20px; }
+
+/* ---------- Students / generic lists ---------- */
+.people { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; max-width: 54rem; }
+.people li { display: grid; grid-template-columns: 7.5rem 1fr; gap: 16px; }
+.people .when { font-family: var(--sans); font-size: 0.875rem; color: var(--ink-soft); padding-top: 3px; }
+.people .when.done { color: var(--teal); font-weight: 600; }
+.people .who { font-weight: 600; }
+.people .what { display: block; color: var(--ink-soft); font-size: 1rem; }
+
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 8px 48px; max-width: 60rem; }
+.plain { padding-left: 1.1em; margin: 0; }
+.plain li { margin-bottom: 8px; }
+.plain li::marker { color: var(--teal); }
+.meta { color: var(--ink-soft); font-size: 1rem; }
+
+footer {
+  margin-top: 72px; padding-top: 24px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--sans); font-size: 0.875rem; color: var(--ink-soft);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .page { grid-template-columns: 1fr; }
+  .identity {
+    position: static; height: auto;
+    border-right: 0; border-bottom: 1px solid var(--rule);
+    padding: 32px 16px 24px;
+    gap: 18px;
+  }
+  .identity nav ul { display: flex; flex-wrap: wrap; gap: 4px 16px; }
+  .identity nav li a { padding: 2px 0; border-left: 0; }
+  .identity nav li a[aria-current="true"] { text-decoration: underline; text-decoration-color: var(--teal); }
+  .portrait { width: 84px; height: 84px; font-size: 2rem; }
+  main { padding: 32px 16px 64px; }
+}
+@media (max-width: 640px) {
+  body { font-size: 1.0625rem; }
+  .trajectory { display: block; padding-top: 0; }
+  .axis { display: none; }
+  .era { margin-bottom: 8px; }
+  .era.ongoing::after { display: none; }
+  .era.label-out { padding: 10px 12px; }
+  .era.label-out .lbl { position: static; transform: none; text-align: left; color: #fff; white-space: normal; }
+  .era.label-out .lbl small { color: inherit; opacity: 0.88; }
+  .era-note, .news li, .people li { grid-template-columns: 1fr; gap: 2px; }
+  .question::before { margin-left: 0; }
+}
+@media print {
+  .identity { position: static; height: auto; border: 0; }
+  .page { grid-template-columns: 1fr; }
+  .pub-tools, .skip { display: none; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="page">
+
+  <!-- ===================== Identity column ===================== -->
+  <aside class="identity">
+    <!-- To use a photo: put it at img/okba.jpg and replace the div below with
+         <img class="portrait" src="img/okba.jpg" alt="Okba Tibermacine"> -->
+    <div class="portrait" aria-hidden="true">OT</div>
+
+    <div>
+      <h1>Okba Tibermacine</h1>
+      <p class="role">Full Professor of Computer Science<br>
+        Intelligent Systems Engineering Department<br>
+        <a href="https://www.ensia.edu.dz/">National School of Artificial Intelligence (ENSIA)</a>, Algiers</p>
+    </div>
+
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#trajectory">Research</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#supervision">Supervision</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#service">Service</a></li>
+      </ul>
+    </nav>
+
+    <ul class="profiles" aria-label="Profiles">
+      <li><a href="https://scholar.google.com/citations?user=MEUJ9kwAAAAJ&amp;hl=en">Google Scholar</a></li>
+      <li><a href="https://orcid.org/0000-0001-7779-1232">ORCID</a></li>
+      <li><a href="https://dblp.org/search?q=Okba+Tibermacine">DBLP</a></li>
+      <!-- Add your LinkedIn URL: <li><a href="https://www.linkedin.com/in/...">LinkedIn</a></li> -->
+    </ul>
+
+    <p class="contact-line"><a href="mailto:okba.tibermacine@ensia.edu.dz">okba.tibermacine@ensia.edu.dz</a></p>
+  </aside>
+
+  <!-- ===================== Main column ===================== -->
+  <main id="main">
+
+    <header class="hero" id="about">
+      <p class="question">How do we build service-based and AI-enabled software whose behaviour can be trusted?</p>
+      <p>I am a Full Professor at the <a href="https://www.ensia.edu.dz/">National School of Artificial Intelligence (ENSIA)</a> in Algiers, where I also serve as Deputy Director of Information Systems, Communication and External Relations. My research sits where software engineering, formal methods and artificial intelligence meet.</p>
+      <p>I began by translating UML models into rewriting logic so they could be model-checked with Maude. My doctoral work on self-healing web service orchestrations led to a long line of research on service similarity, reputation and trust, and later to microservice identification for legacy migration, IoT service discovery and secure AI. Today I work on LLM-based software engineering: neuro-symbolic requirements elicitation, QoS-aware brokering of LLM services, and automated program repair.</p>
+      <p>Before ENSIA I spent over a decade at the University of Biskra, where I headed the Computer Science department and lead the Services and Software Engineering (2SE) team at the LRP laboratory, with two years at Jouf University in Saudi Arabia.</p>
+    </header>
+
+    <!-- ===================== Trajectory ===================== -->
+    <section id="trajectory" aria-labelledby="h-trajectory">
+      <h2 id="h-trajectory">Research trajectory</h2>
+      <p class="lede">Each line of work grew out of the one before it. The bars span the years each theme was active.</p>
+
+      <div class="trajectory" role="img" aria-label="Timeline of research themes from 2008 to present">
+        <div class="axis" aria-hidden="true">
+          <span>2008</span><span>09</span><span>2010</span><span>11</span><span>2012</span><span>13</span><span>2014</span><span>15</span><span>2016</span><span>17</span><span>2018</span><span>19</span><span>2020</span><span>21</span><span>2022</span><span>23</span><span>2024</span><span>25</span><span>2026</span>
+        </div>
+        <div class="era" style="--c: var(--era-1); grid-column: 1 / 7;"><b>Formal verification</b><small>UML · Maude</small></div>
+        <div class="era" style="--c: var(--era-2); grid-column: 5 / 13;"><b>Reliable service-oriented systems</b><small>Similarity, healing, reputation</small></div>
+        <div class="era" style="--c: var(--era-3); grid-column: 11 / 17;"><b>Service-oriented IoT</b><small>Discovery, D2D</small></div>
+        <div class="era ongoing" style="--c: var(--era-4); grid-column: 13 / 20;"><b>Microservices &amp; trustworthy AI</b><small>Migration, Saga, robustness</small></div>
+        <div class="era ongoing label-out" style="--c: var(--era-5); grid-column: 18 / 20;"><span class="lbl"><b>LLM-based software engineering</b><small>Neuro-symbolic, LLM services, program repair</small></span></div>
+      </div>
+
+      <div class="era-notes">
+        <div class="era-note" style="--c: var(--era-1)">
+          <span class="yrs">2008 – 2013</span>
+          <p><strong>Formal verification of software models.</strong> Translating UML state machine and collaboration diagrams into rewriting logic for model checking with Maude.</p>
+        </div>
+        <div class="era-note" style="--c: var(--era-2)">
+          <span class="yrs">2012 – 2019</span>
+          <p><strong>Reliable service-oriented systems.</strong> Interface-based similarity of WSDL services (the WSSim tool), finding substitutes to heal failed WS-BPEL orchestrations, and bootstrapping the reputation of newcomer services. Published in JSS and at IEEE ICWS.</p>
+        </div>
+        <div class="era-note" style="--c: var(--era-3)">
+          <span class="yrs">2018 – 2023</span>
+          <p><strong>Service-oriented IoT.</strong> Service discovery and device-to-device communication for post-disaster scenarios, and IoT network optimisation (AINA, IWCMC, IEEE ICC, JNCA).</p>
+        </div>
+        <div class="era-note" style="--c: var(--era-4)">
+          <span class="yrs">2020 – now</span>
+          <p><strong>Microservices, distributed transactions and trustworthy AI.</strong> Data-centric microservice identification for legacy migration, Maude-based verification of Saga transactions, trust models for service recommendation, medical image steganography and adversarial robustness.</p>
+        </div>
+        <div class="era-note" style="--c: var(--era-5)">
+          <span class="yrs">2025 – now</span>
+          <p><strong>LLM-based and neuro-symbolic software engineering.</strong> Using formal verification counterexamples to guide LLM requirements elicitation, SLA-constrained routing of LLM-as-a-Service, and LLM-based program repair. Four doctoral projects started at ENSIA in 2026 extend this to the security of AI-generated code, the robustness and cognition of autonomous LLM agents, and environmentally-aware architecture migration.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== News ===================== -->
+    <section id="news" aria-labelledby="h-news">
+      <h2 id="h-news">News</h2>
+      <ul class="news">
+        <li><time datetime="2026-10">Oct 2026</time><span>Presenting <a href="#c1">neuro-symbolic requirements elicitation</a> at <strong>IEEE/ACM ASE 2026</strong> in Munich (acceptance rate 11%).</span></li>
+        <li><time datetime="2026-07">Jul 2026</time><span><a href="#c2">QoS-aware brokering for LLM-as-a-Service</a> presented at <strong>IEEE ICWS 2026</strong>, Sydney (acceptance rate 19%).</span></li>
+        <li><time datetime="2026">2026</time><span>Four new PhD students start at ENSIA on AI-generated code security, LLM agents, and architecture migration.</span></li>
+        <li><time datetime="2026">2026</time><span>Our <a href="#j1">taxonomy of prompting strategies for LLM-based program repair</a> is out in the <em>Journal of Systems and Software</em>.</span></li>
+        <li><time datetime="2026-07">2026</time><span><a href="#j2">Data-centric microservice identification</a> published in <em>Information and Software Technology</em>.</span></li>
+        <li><time datetime="2025-07">Jul 2025</time><span>Promoted to Full Professor at ENSIA.</span></li>
+        <li><time datetime="2025-06">Jun 2025</time><span>Hadjer Saidi defends her PhD on medical data steganography using deep learning.</span></li>
+      </ul>
+    </section>
+
+    <!-- ===================== Publications ===================== -->
+    <section id="publications" aria-labelledby="h-pubs">
+      <h2 id="h-pubs">Publications</h2>
+      <p class="lede">Underlined names are students I supervised or co-supervised. The most current list is on <a href="https://scholar.google.com/citations?user=MEUJ9kwAAAAJ&amp;hl=en">Google Scholar</a>.</p>
+
+      <div class="pub-tools">
+        <div class="filter" role="group" aria-label="Filter by type">
+          <button type="button" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" data-filter="journal" aria-pressed="false">Journals</button>
+          <button type="button" data-filter="conference" aria-pressed="false">Conferences</button>
+          <button type="button" data-filter="other" aria-pressed="false">Other</button>
+        </div>
+        <label class="sr" for="pub-search" style="position:absolute;left:-9999px">Search publications</label>
+        <input id="pub-search" class="search" type="search" placeholder="Search titles, venues, co-authors">
+        <span class="count" id="pub-count" aria-live="polite"></span>
+      </div>
+
+      <!-- 2027 -->
+      <div class="year-group"><h3>2027</h3><ul class="pubs">
+        <li class="pub" data-type="journal" id="j1"><span class="tag">J</span><div>
+          <span class="title">Toward effective LLM-based automated program repair: A taxonomy of prompting strategies and key trends, insights, and challenges</span>
+          <span class="authors"><u>O. Messarhi</u>, M. L. Kerdoudi, <strong>O. Tibermacine</strong></span>
+          <span class="venue"><em>Journal of Systems and Software</em> (Elsevier), vol. 243, art. 113101, 2027. Available online 2026.</span>
+          <div class="links"><a href="https://doi.org/10.1016/j.jss.2026.113101">DOI</a></div>
+        </div></li>
+      </ul></div>
+
+      <!-- 2026 -->
+      <div class="year-group"><h3>2026</h3><ul class="pubs">
+        <li class="pub" data-type="conference" id="c1"><span class="tag">C</span><div>
+          <span class="title">Neuro-symbolic requirements elicitation: Utilizing formal verification counterexamples as contextual prompts</span>
+          <span class="authors"><strong>O. Tibermacine</strong>, C. Tibermacine</span>
+          <span class="venue"><em>41st IEEE/ACM International Conference on Automated Software Engineering (ASE 2026)</em>, Munich, Germany, October 2026. <span class="badge">Acceptance 11%</span></span>
+          <div class="links"><a href="https://ctiber.github.io/papers/2026/OT_CT_ASE_2026.pdf">PDF</a><a href="https://ctiber.github.io/papers/2026/OT_CT_ASE_2026.bib">BibTeX</a><a href="https://ctiber.github.io/papers/2026/OT_CT_ASE_2026_Slides.pdf">Slides</a></div>
+        </div></li>
+        <li class="pub" data-type="conference" id="c2"><span class="tag">C</span><div>
+          <span class="title">QoS-aware brokering for LLM-as-a-Service: SLA-constrained routing with drift detection</span>
+          <span class="authors"><strong>O. Tibermacine</strong>, C. Tibermacine</span>
+          <span class="venue"><em>IEEE International Conference on Web Services (ICWS 2026)</em>, Sydney, Australia, July 2026. IEEE CS. <span class="badge">Acceptance 19%</span></span>
+          <div class="links"><a href="https://ctiber.github.io/papers/2026/OT_CT_ICWS_2026.pdf">PDF</a><a href="https://ctiber.github.io/papers/2026/OT_CT_ICWS_2026.bib">BibTeX</a><a href="https://ctiber.github.io/papers/2026/OT_CT_ICWS_2026_Slides.pdf">Slides</a></div>
+        </div></li>
+        <li class="pub" data-type="journal" id="j2"><span class="tag">J</span><div>
+          <span class="title">A data-centric method for microservice identification: From data models analysis to source code assignment</span>
+          <span class="authors"><u>Y. Romani</u>, <strong>O. Tibermacine</strong>, C. Tibermacine</span>
+          <span class="venue"><em>Information and Software Technology</em> (Elsevier), vol. 195, art. 108141, 2026.</span>
+          <div class="links"><a href="https://ctiber.github.io/papers/2026/YRetAl_IST_2026.pdf">PDF</a><a href="https://ctiber.github.io/papers/2026/YRetAl_IST_2026.bib">BibTeX</a><a href="https://doi.org/10.1016/j.infsof.2026.108141">DOI</a></div>
+        </div></li>
+      </ul></div>
+
+      <!-- 2025 -->
+      <div class="year-group"><h3>2025</h3><ul class="pubs">
+        <li class="pub" data-type="journal"><span class="tag">J</span><div>
+          <span class="title">Evaluation of FGSM variants with GradSwitch-MI-FGSM: A gradient-level channel switching approach</span>
+          <span class="authors"><u>D. Benchaira</u>, <strong>O. Tibermacine</strong>, F. Cherif</span>
+          <span class="venue"><em>IEEE Access</em>, vol. 13, pp. 214562–214579, 2025.</span>
+          <div class="links"><a href="https://doi.org/10.1109/ACCESS.2025.3645909">DOI</a></div>
+        </div></li>
+        <li class="pub" data-type="conference"><span class="tag">C</span><div>
+          <span class="title">Particle swarm-enhanced FGSM: Toward more efficient and stealthy adversarial example generation</span>
+          <span class="authors"><u>D. Benchaira</u>, <strong>O. Tibermacine</strong>, F. Cherif</span>
+          <span class="venue"><em>1st IEEE International Conference on Artificial Intelligence and Cyber Physical Systems (AICPS 2025)</em>, November 2025.</span>
+        </div></li>
+        <li class="pub" data-type="conference"><span class="tag">C</span><div>
+          <span class="title">Privacy-preserving medical image steganography: A clinical quality-aware deep learning framework</span>
+          <span class="authors"><u>H. Saidi</u>, <strong>O. Tibermacine</strong>, A. Elhadad</span>
+          <span class="venue"><em>7th International Conference on Pattern Analysis and Intelligent Systems (PAIS 2025)</em>, Laghouat, Algeria, IEEE, pp. 1–6, 2025.</span>
+        </div></li>
+      </ul></div>
+
+      <!-- 2024 -->
+      <div class="year-group"><h3>2024</h3><ul class="pubs">
+        <li class="pub" data-type="journal"><span class="tag">J</span><div>
+          <span class="title">High-capacity data hiding for medical images based on the mask-RCNN model</span>
+          <span class="authors"><u>H. Saidi</u>, <strong>O. Tibermacine</strong>, A. Elhadad</span>
+          <span class="venue"><em>Scientific Reports</em> (Nature Portfolio), vol. 14, no. 1, art. 7166, 2024.</span>
+          <div class="links"><a href="https://doi.org/10.1038/s41598-024-55639-9">DOI</a></div>
+        </div></li>
+      </ul></div>
+
+      <!-- 2023 -->
+      <div class="year-group"><h3>2023</h3><ul class="pubs">
+        <li class="pub" data-type="journal"><span class="tag">J</span><div>
+          <span class="title">Heterogeneous IoT/LTE ProSe virtual infrastructure for disaster situations</span>
+          <span class="authors"><u>S. Abdellatif</u>, <strong>O. Tibermacine</strong>, W. Bechkit, A. Bachir</span>
+          <span class="venue"><em>Journal of Network and Computer Applications</em> (Elsevier), vol. 213, art. 103602, 2023.</span>
+          <div class="links"><a href="https://doi.org/10.1016/j.jnca.2023.103602">DOI</a></div>
+        </div></li>
+        <li class="pub" data-type="journal"><span class="tag">J</span><div>
+          <span class="title">A reputation assessment model for trustful service recommendation</span>
+          <span class="authors"><strong>O. Tibermacine</strong>, C. Tibermacine, F. Cherif</span>
+          <span class="venue"><em>Computer Standards &amp; Interfaces</em> (Elsevier), vol. 84, art. 103701, 2023.</span>
+          <div class="links"><a href="https://ctiber.github.io/papers/2023/OTetAl_CSI_2023.pdf">PDF</a><a href="https://ctiber.github.io/papers/2023/OTetAl_CSI_2023.bib">BibTeX</a><a href="https://doi.org/10.1016/j.csi.2022.103701">DOI</a></div>
+        </div></li>
+        <li class="pub" data-type="other"><span class="tag">W</span><div>
+          <span class="title">Data hiding in medical images using deep learning and LSB steganography</span>
+          <span class="authors"><u>H. Saidi</u>, <strong>O. Tibermacine</strong></span>
+          <span class="venue"><em>1st Workshop on Advances in Deep Learning for Image and Immersive Technologies (ADL2IT)</em>, LESIA Laboratory, University of Biskra, 2023.</span>
+        </div></li>
+      </ul></div>
+
+      <!-- 2022 -->
+      <div class="year-group"><h3>2022</h3><ul class="pubs">
+        <li class="pub" data-type="conference"><span class="tag">C</span><div>
+          <span class="title">Towards migrating legacy software systems to microservice-based architectures: A data-centric process for microservice identification</span>
+          <span class="authors"><u>Y. Romani</u>, <strong>O. Tibermacine</strong>, C. Tibermacine</span>
+          <span class="venue"><em>19th IEEE International Conference on Software Architecture (ICSA 2022)</em>, New and Emerging Ideas Track, Honolulu, USA, 2022.</span>
+          <div class="links"><a href="https://ctiber.github.io/papers/2022/YRetAl_ICSA_NEI_2022.pdf">PDF</a><a href="https://ctiber.github.io/papers/2022/YRetAl_ICSA_NEI_2022.bib">BibTeX</a></div>
+        </div></li>
+        <li class="pub" data-type="conference"><span class="tag">C</span><div>
+          <span class="title">Leveraging predictability for global optimization of IoT networks</span>
+          <span class="authors"><u>D. Benchaira</u>, <strong>O. Tibermacine</strong>, W. Bechkit, A. Bachir</span>
+          <span class="venue"><em>IEEE International Conference on Communications (ICC 2022)</em>, Seoul, Korea, pp. 3586–3591, 2022.</span>
+        </div></li>
+        <li class="pub" data-type="conference"><span class="tag">C</span><div>
+          <span class="title">SAGA distributed transactions verification using Maude</span>
+          <span class="authors"><u>M. Djerou</u>, <strong>O. Tibermacine</strong></span>
+          <span class="venue"><em>International Symposium on iNnovative Informatics of Biskra (ISNIB 2022)</em>, Biskra, Algeria, IEEE, pp. 1–6, 2022.</span>
+        </div></li>
+        <li class="pub" data-type="conference"><span class="tag">C</span><div>
+          <span class="title">Hiding privacy data in visual surveillance video based on wavelet and flexible function</span>
+          <span class="authors">A. Elhadad, <strong>O. Tibermacine</strong>, S. Hamad</span>
+          <span class="venue"><em>2nd International Conference on Smart Systems and Emerging Technologies (SMARTTECH 2022)</em>, Riyadh, Saudi Arabia, IEEE, 2022.</span>
+        </div></li>
+      </ul></div>
+
+      <!-- 2020 -->
+      <div class="year-group"><h3>2020</h3><ul class="pubs">
+        <li class="pub" data-type="conference"><span class="tag">C</span><div>
+          <span class="title">Efficient distributed D2D ProSe-based service discovery and querying in disaster situations</span>
+          <span class="authors"><u>S. Abdellatif</u>, <strong>O. Tibermacine</strong>, W. Bechkit, A. Bachir</span>
+          <span class="venue"><em>International Conference on Advanced Information Networking and Applications (AINA 2020)</em>, Springer, pp. 910–921, 2020.</span>
+        </div></li>
+        <li class="pub" data-type="conference"><span class="tag">C</span><div>
+          <span class="title">Service oriented D2D efficient communication for post-disaster management</span>
+          <span class="authors"><u>S. Abdellatif</u>, <strong>O. Tibermacine</strong>, W. Bechkit, A. Bachir</span>
+          <span class="venue"><em>International Wireless Communications and Mobile Computing Conference (IWCMC 2020)</em>, Limassol, Cyprus, IEEE, pp. 970–975, 2020.</span>
+        </div></li>
+      </ul></div>
+
+      <!-- 2019 -->
+      <div class="year-group"><h3>2019</h3><ul class="pubs">
+        <li class="pub" data-type="conference"><span class="tag">C</span><div>
+          <span class="title">Reputation evaluation with malicious feedback prevention using a HITS-based model</span>
+          <span class="authors"><strong>O. Tibermacine</strong>, C. Tibermacine, M. L. Kerdoudi</span>
+          <span class="venue"><em>IEEE International Conference on Web Services (ICWS 2019)</em>, Milan, Italy, pp. 180–187, 2019. <span class="badge">Acceptance 20%</span></span>
+          <div class="links"><a href="https://ctiber.github.io/papers/2019/OTetAl_ICWS_2019.pdf">PDF</a><a href="https://ctiber.github.io/papers/2019/OTetAl_ICWS_2019.bib">BibTeX</a></div>
+        </div></li>
+        <li class="pub" data-type="conference"><span class="tag">C</span><div>
+          <span class="title">Sentiment analysis of Arabic Algerian dialect using a supervised method</span>
+          <span class="authors">A. Abdelli, F. Guerrouf, <strong>O. Tibermacine</strong>, B. Abdelli</span>
+          <span class="venue"><em>International Conference on Intelligent Systems and Advanced Computing Sciences (ISACS 2019)</em>, 2019.</span>
+        </div></li>
+      </ul></div>
+
+      <!-- 2018 -->
+      <div class="year-group"><h3>2018</h3><ul class="pubs">
+        <li class="pub" data-type="journal"><span class="tag">J</span><div>
+          <span class="title">Estimating the reputation of newcomer web services using a regression-based method</span>
+          <span class="authors"><strong>O. Tibermacine</strong>, C. Tibermacine, F. Cherif</span>
+          <span class="venue"><em>Journal of Systems and Software</em> (Elsevier), vol. 145, pp. 112–124, 2018.</span>
+          <div class="links"><a href="https://ctiber.github.io/papers/2018/OTetAl_JSS_2018.pdf">PDF</a><a href="https://ctiber.github.io/papers/2018/OTetAl_JSS_2018.bib">BibTeX</a><a href="https://doi.org/10.1016/j.jss.2018.08.026">DOI</a></div>
+        </div></li>
+        <li class="pub" data-type="conference"><span class="tag">C</span><div>
+          <span class="title">Service discovery in the Internet of Things: A survey</span>
+          <span class="authors"><u>S. Abdellatif</u>, <strong>O. Tibermacine</strong>, A. Bachir</span>
+          <span class="venue"><em>International Symposium on Modelling and Implementation of Complex Systems (MISC 2018)</em>, Springer, pp. 60–74, 2018.</span>
+        </div></li>
+      </ul></div>
+
+      <!-- 2015 -->
+      <div class="year-group"><h3>2015</h3><ul class="pubs">
+        <li class="pub" data-type="journal"><span class="tag">J</span><div>
+          <span class="title">A process to identify relevant substitutes for healing failed WS-* orchestrations</span>
+          <span class="authors"><strong>O. Tibermacine</strong>, C. Tibermacine, F. Cherif</span>
+          <span class="venue"><em>Journal of Systems and Software</em> (Elsevier), vol. 104, pp. 1–16, 2015.</span>
+          <div class="links"><a href="https://doi.org/10.1016/j.jss.2015.02.028">DOI</a></div>
+        </div></li>
+        <li class="pub" data-type="conference"><span class="tag">C</span><div>
+          <span class="title">Regression-based bootstrapping of web service reputation measurement</span>
+          <span class="authors"><strong>O. Tibermacine</strong>, C. Tibermacine, F. Cherif</span>
+          <span class="venue"><em>IEEE International Conference on Web Services (ICWS 2015)</em>, Application Track, New York, USA, pp. 377–384, 2015.</span>
+        </div></li>
+        <li class="pub" data-type="other"><span class="tag">T</span><div>
+          <span class="title">Orchestration de Web Services fiables (Reliable web service orchestrations)</span>
+          <span class="authors"><strong>O. Tibermacine</strong></span>
+          <span class="venue">PhD thesis, University of Biskra, Algeria, 2015.</span>
+        </div></li>
+      </ul></div>
+
+      <!-- 2014 -->
+      <div class="year-group"><h3>2014</h3><ul class="pubs">
+        <li class="pub" data-type="journal"><span class="tag">J</span><div>
+          <span class="title">A practical approach to the measurement of similarity between WSDL-based web services</span>
+          <span class="authors"><strong>O. Tibermacine</strong>, C. Tibermacine, F. Cherif</span>
+          <span class="venue"><em>Revue des Nouvelles Technologies de l'Information</em>, RNTI-L-7, pp. 3–18. Selected papers from CAL.</span>
+          <div class="links"><a href="https://ctiber.github.io/papers/2014/OTetAl_RNTI_2014.pdf">PDF</a><a href="https://ctiber.github.io/papers/2014/OTetAl_RNTI_2014.bib">BibTeX</a></div>
+        </div></li>
+      </ul></div>
+
+      <!-- 2013 -->
+      <div class="year-group"><h3>2013</h3><ul class="pubs">
+        <li class="pub" data-type="conference"><span class="tag">C</span><div>
+          <span class="title">WSSim: A tool for the measurement of web service interface similarity</span>
+          <span class="authors"><strong>O. Tibermacine</strong>, C. Tibermacine, F. Cherif</span>
+          <span class="venue"><em>7e Conférence francophone sur les Architectures Logicielles (CAL 2013)</em>, Toulouse, France, May 2013.</span>
+          <div class="links"><a href="https://ctiber.github.io/papers/2013/OTetAl_CAL_2013.pdf">PDF</a><a href="https://ctiber.github.io/papers/2013/OTetAl_CAL_2013.bib">BibTeX</a></div>
+        </div></li>
+        <li class="pub" data-type="journal"><span class="tag">J</span><div>
+          <span class="title">DBpedia based factoid question answering system</span>
+          <span class="authors"><u>A. Tahri</u>, <strong>O. Tibermacine</strong></span>
+          <span class="venue"><em>International Journal of Web &amp; Semantic Technology (IJWesT)</em>, vol. 4, no. 3, 2013.</span>
+        </div></li>
+      </ul></div>
+
+      <!-- 2012 and before -->
+      <div class="year-group"><h3>2012 and earlier</h3><ul class="pubs">
+        <li class="pub" data-type="other"><span class="tag">B</span><div>
+          <span class="title">Formal verification of a subset of UML diagrams: An approach using Maude</span>
+          <span class="authors">A. Chaoui, <strong>O. Tibermacine</strong>, A. R. Zerek</span>
+          <span class="venue">Book chapter in <em>Computer Engineering: Concepts, Methodologies, Tools and Applications</em>, IGI Global, pp. 948–958, 2012.</span>
+        </div></li>
+        <li class="pub" data-type="other"><span class="tag">T</span><div>
+          <span class="title">UML et model checking (UML and model checking)</span>
+          <span class="authors"><strong>O. Tibermacine</strong></span>
+          <span class="venue">MSc thesis, University of Batna, Algeria, 2009.</span>
+        </div></li>
+        <li class="pub" data-type="conference"><span class="tag">C</span><div>
+          <span class="title">Model checking UML state machine and collaboration diagrams using Maude</span>
+          <span class="authors">A. Chaoui, <strong>O. Tibermacine</strong>, A. Rezek</span>
+          <span class="venue"><em>International Arab Conference on e-Technology (IACeT 2008)</em>, 2008.</span>
+        </div></li>
+      </ul></div>
+
+      <p class="note">PDFs linked here are preliminary versions hosted on <a href="https://ctiber.github.io/">Chouki Tibermacine's page</a>. Final versions are available from the publishers holding the copyright. Key: J journal, C conference, W workshop, B book chapter, T thesis.</p>
+    </section>
+
+    <!-- ===================== Supervision ===================== -->
+    <section id="supervision" aria-labelledby="h-sup">
+      <h2 id="h-sup">Supervision</h2>
+      <p class="lede">Nine doctoral candidates (two defended), sixteen Master's theses and six Bachelor's projects to date.</p>
+
+      <h3>Doctoral students</h3>
+      <ul class="people">
+        <li><span class="when">Started 2026</span><span><span class="who">Dina Khezzane</span>, ENSIA<span class="what">Toward a security-by-construction software development lifecycle for AI-generated code</span></span></li>
+        <li><span class="when">Started 2026</span><span><span class="who">Amine Slamani</span>, ENSIA<span class="what">Agent-based reasoning for environmentally-aware migration of software architectures</span></span></li>
+        <li><span class="when">Started 2026</span><span><span class="who">Fayçal Amrouche</span>, ENSIA<span class="what">Cognitive distillation and schema formation for autonomous AI agents</span></span></li>
+        <li><span class="when">Started 2026</span><span><span class="who">Mohamed Benabdelouahad</span>, ENSIA<span class="what">Toward a semantic invariant defense framework for autonomous LLM agents</span></span></li>
+        <li><span class="when">Ongoing</span><span><span class="who">Omar Messarhi</span>, University of Biskra<span class="what">Leveraging large language models and agentic AI for automated program repair</span></span></li>
+        <li><span class="when">Ongoing</span><span><span class="who">Yamina Romani</span>, University of Biskra<span class="what">Identification of microservices from dynamic architectures using machine learning</span></span></li>
+        <li><span class="when">Ongoing</span><span><span class="who">Samir Belhadi</span>, University of Biskra<span class="what">Dynamic selection and composition of mobile IoT services using machine learning</span></span></li>
+        <li><span class="when done">Defended 2025</span><span><span class="who">Hadjer Saidi</span>, University of Biskra<span class="what">Medical data steganography using deep learning</span></span></li>
+        <li><span class="when done">Defended 2023</span><span><span class="who">Sami Abdellatif</span>, University of Biskra (co-supervised)<span class="what">Service description, discovery and composition in IoT ecosystems</span></span></li>
+      </ul>
+
+      <h3>Recent Master's theses</h3>
+      <ul class="plain">
+        <li>Test case generation for REST APIs using clustering and evolutionary techniques <span class="meta">(A. Gasmi, 2023)</span></li>
+        <li>Automatic comment generation from source code using machine learning <span class="meta">(D. Kihal, 2023)</span></li>
+        <li>Verification of SAGA distributed transactions using Maude <span class="meta">(M. Djerou, 2022)</span></li>
+        <li>Topic modelling for short texts <span class="meta">(O. Heriz, 2022)</span></li>
+        <li>Service and consumer reputation management using blockchains <span class="meta">(M. C. Kelalla, 2021)</span></li>
+        <li>Data compression with encoder–decoder architectures <span class="meta">(A. Zendagui, 2021)</span></li>
+        <li>Sentiment analysis of Arabic using deep learning <span class="meta">(C. Kihal, 2020)</span></li>
+      </ul>
+    </section>
+
+    <!-- ===================== Projects ===================== -->
+    <section id="projects" aria-labelledby="h-proj">
+      <h2 id="h-proj">Research projects</h2>
+      <ul class="people">
+        <li><span class="when">2022 – 2025</span><span><span class="who">Automating the migration of monolithic applications to microservices in the cloud</span><span class="what">Principal investigator. PRFU project C00L07UN070120220008, Ministry of Higher Education and Scientific Research, Algeria.</span></span></li>
+        <li><span class="when">2022 – 2025</span><span><span class="who">Methods for detecting software vulnerabilities: a source code vulnerability analyzer</span><span class="what">Principal investigator. University of Biskra.</span></span></li>
+        <li><span class="when">2023 – 2025</span><span><span class="who">Algeria Research Hub</span><span class="what">Member. Cooperation between ENSIA, ENHSM and the University of Notre Dame (USA) on smart cities.</span></span></li>
+        <li><span class="when">2011 – 2012</span><span><span class="who">Simulation platform for autonomous pedestrian crowds</span><span class="what">Member. CNEPRU project B*01420100016, coordinated by Prof. Foudil Cherif.</span></span></li>
+      </ul>
+    </section>
+
+    <!-- ===================== Teaching ===================== -->
+    <section id="teaching" aria-labelledby="h-teach">
+      <h2 id="h-teach">Teaching</h2>
+      <p class="lede">Undergraduate and graduate teaching since 2009, in English and French.</p>
+      <div class="cols">
+        <div>
+          <h3>ENSIA (in English)</h3>
+          <ul class="plain">
+            <li>Software Engineering</li>
+            <li>Operating Systems</li>
+            <li>Group Projects</li>
+          </ul>
+        </div>
+        <div>
+          <h3>University of Biskra</h3>
+          <ul class="plain">
+            <li>Rewriting Logic and its Applications (Master)</li>
+            <li>Service-Oriented Architecture</li>
+            <li>Distributed Application Development</li>
+            <li>Software and Service Engineering</li>
+            <li>Computability</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Service ===================== -->
+    <section id="service" aria-labelledby="h-svc">
+      <h2 id="h-svc">Leadership and service</h2>
+      <div class="cols">
+        <div>
+          <h3>Leadership</h3>
+          <ul class="plain">
+            <li>Deputy Director of Information Systems, Communication and External Relations, ENSIA <span class="meta">(2023 – now)</span></li>
+            <li>Leader, Services and Software Engineering (2SE) team, LRP Laboratory, University of Biskra <span class="meta">(2022 – now)</span></li>
+            <li>Head of the Computer Science Department, University of Biskra <span class="meta">(2022 – 2023)</span></li>
+            <li>Member, National Pedagogical Committee of Schools (CPNE) <span class="meta">(2024 – now)</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Reviewing and organisation</h3>
+          <ul class="plain">
+            <li>Reviewer for IEEE Transactions on Services Computing, Information and Software Technology, Computer Standards &amp; Interfaces and others</li>
+            <li>Program committees: ICSOC 2019, AICCSA 2015 and 2017; reviewer for IEEE ICWS 2019–2022 and 2025</li>
+            <li>Chair, organising committee of ISNIB 2022 (IEEE Algeria)</li>
+            <li>Co-chair, ENSIA–ENHSM–Notre Dame Symposium on Smart Cities 2025</li>
+            <li>External PhD examiner, Sorbonne Université (2021)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Okba Tibermacine, National School of Artificial Intelligence (ENSIA), Algiers, Algeria. Member of the ACM. Last updated October 2026.</p>
+    </footer>
+  </main>
+</div>
+
+<script>
+(function () {
+  // Publication filter + search
+  var buttons = document.querySelectorAll('.filter button');
+  var search = document.getElementById('pub-search');
+  var pubs = Array.prototype.slice.call(document.querySelectorAll('.pub'));
+  var groups = document.querySelectorAll('.year-group');
+  var count = document.getElementById('pub-count');
+  var active = 'all';
+
+  function apply() {
+    var q = (search.value || '').trim().toLowerCase();
+    var shown = 0;
+    pubs.forEach(function (p) {
+      var okType = active === 'all' || p.dataset.type === active;
+      var okText = !q || p.textContent.toLowerCase().indexOf(q) !== -1;
+      p.hidden = !(okType && okText);
+      if (!p.hidden) shown++;
+    });
+    groups.forEach(function (g) { g.hidden = !g.querySelector('.pub:not([hidden])'); });
+    count.textContent = shown + (shown === 1 ? ' item' : ' items');
+  }
+
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () {
+      active = b.dataset.filter;
+      buttons.forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+      apply();
+    });
+  });
+  search.addEventListener('input', apply);
+  apply();
+
+  // Highlight current section in the side nav
+  var links = document.querySelectorAll('.identity nav a');
+  if ('IntersectionObserver' in window) {
+    var map = {};
+    links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && map[e.target.id]) {
+          links.forEach(function (a) { a.removeAttribute('aria-current'); });
+          map[e.target.id].setAttribute('aria-current', 'true');
+        }
+      });
+    }, { rootMargin: '-30% 0px -60% 0px' });
+    Object.keys(map).forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) io.observe(el);
+    });
+  }
+})();
+</script>
+</body>
+</html>
