@@ -41,6 +41,8 @@
   --teal-wash: #e0eef0;
   --ochre: #a87a1f;
   --ochre-wash: #f5ecd8;
+  --plum: #7a3b69;
+  --plum-wash: #f3e6ef;
   --era-1: #7d93a3;
   --era-2: #1d6a73;
   --era-3: #5c8a5a;
@@ -61,6 +63,8 @@
     --teal-wash: #1a3238;
     --ochre: #d9ab55;
     --ochre-wash: #2e2717;
+    --plum: #d29bc4;
+    --plum-wash: #33202e;
     --era-1: #8ea5b5;
     --era-2: #5fb0b8;
     --era-3: #86b483;
@@ -323,6 +327,14 @@ h3 { font-weight: 600; font-size: 1.1875rem; margin: 32px 0 12px; }
 .pub .venue em { color: var(--ink); }
 .links { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 6px; font-family: var(--sans); font-size: 0.875rem; }
 .badge { font-family: var(--sans); font-size: 0.8125rem; color: var(--ochre); margin-left: 4px; white-space: nowrap; }
+.rank { display: inline-block; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.02em; padding: 1px 7px; margin-left: 4px; border-radius: 999px; border: 1px solid currentColor; white-space: nowrap; vertical-align: 1px; }
+.rank-astar { color: var(--surface); background: var(--teal); border-color: transparent; }
+.rank-a { color: var(--teal); background: var(--teal-wash); border-color: transparent; }
+.rank-b { color: var(--ochre); background: var(--ochre-wash); border-color: transparent; }
+.rank-c { color: var(--ink-soft); }
+.q1 { color: var(--plum); background: var(--plum-wash); border-color: transparent; }
+.q2 { color: var(--plum); }
+.q3, .q4 { color: var(--ink-soft); }
 .pub[hidden], .year-group[hidden] { display: none; }
 .note { font-size: 0.9375rem; color: var(--ink-soft); max-width: var(--measure); margin-top: 20px; }
 
@@ -387,9 +399,7 @@ footer {
 
   <!-- ===================== Identity column ===================== -->
   <aside class="identity">
-    <!-- To use a photo: put it at img/okba.jpg and replace the div below with
-         <img class="portrait" src="img/okba.jpg" alt="Okba Tibermacine"> -->
-    <div class="portrait" aria-hidden="true">OT</div>
+    <img class="portrait" src="img/Okba4.jpg" alt="Okba Tibermacine">
 
     <div>
       <h1>Okba Tibermacine</h1>
@@ -507,7 +517,7 @@ footer {
         <li class="pub" data-type="journal" id="j1"><span class="tag">J</span><div>
           <span class="title">Toward effective LLM-based automated program repair: A taxonomy of prompting strategies and key trends, insights, and challenges</span>
           <span class="authors"><u>O. Messarhi</u>, M. L. Kerdoudi, <strong>O. Tibermacine</strong></span>
-          <span class="venue"><em>Journal of Systems and Software</em> (Elsevier), vol. 243, art. 113101, 2027. Available online 2026.</span>
+          <span class="venue"><em>Journal of Systems and Software</em> (Elsevier), vol. 243, art. 113101, 2027. Available online 2026. <span class="rank rank-a" title="CORE journal ranking (CORE2020)">CORE A</span> <span class="rank q1" title="Scopus quartile, best subject category (SCImago SJR)">Q1</span></span>
           <div class="links"><a href="https://doi.org/10.1016/j.jss.2026.113101">DOI</a></div>
         </div></li>
       </ul></div>
@@ -517,20 +527,20 @@ footer {
         <li class="pub" data-type="conference" id="c1"><span class="tag">C</span><div>
           <span class="title">Neuro-symbolic requirements elicitation: Utilizing formal verification counterexamples as contextual prompts</span>
           <span class="authors"><strong>O. Tibermacine</strong>, C. Tibermacine</span>
-          <span class="venue"><em>41st IEEE/ACM International Conference on Automated Software Engineering (ASE 2026)</em>, Munich, Germany, October 2026. <span class="badge">Acceptance 11%</span></span>
-          <div class="links"><a href="https://ctiber.github.io/papers/2026/OT_CT_ASE_2026.pdf">PDF</a><a href="https://ctiber.github.io/papers/2026/OT_CT_ASE_2026.bib">BibTeX</a><a href="https://ctiber.github.io/papers/2026/OT_CT_ASE_2026_Slides.pdf">Slides</a></div>
+          <span class="venue"><em>41st IEEE/ACM International Conference on Automated Software Engineering (ASE 2026)</em>, Munich, Germany, October 2026. <span class="badge">Acceptance 11%</span> <span class="rank rank-astar" title="CORE conference ranking (ICORE2026)">CORE A*</span></span>
+          <div class="links"><a href="papers/2026/OT_CT_ASE_2026.pdf">PDF</a><a href="papers/2026/OT_CT_ASE_2026.bib">BibTeX</a><a href="papers/2026/OT_CT_ASE_2026_Slides.pdf">Slides</a></div>
         </div></li>
         <li class="pub" data-type="conference" id="c2"><span class="tag">C</span><div>
           <span class="title">QoS-aware brokering for LLM-as-a-Service: SLA-constrained routing with drift detection</span>
           <span class="authors"><strong>O. Tibermacine</strong>, C. Tibermacine</span>
-          <span class="venue"><em>IEEE International Conference on Web Services (ICWS 2026)</em>, Sydney, Australia, July 2026. IEEE CS. <span class="badge">Acceptance 19%</span></span>
-          <div class="links"><a href="https://ctiber.github.io/papers/2026/OT_CT_ICWS_2026.pdf">PDF</a><a href="https://ctiber.github.io/papers/2026/OT_CT_ICWS_2026.bib">BibTeX</a><a href="https://ctiber.github.io/papers/2026/OT_CT_ICWS_2026_Slides.pdf">Slides</a></div>
+          <span class="venue"><em>IEEE International Conference on Web Services (ICWS 2026)</em>, Sydney, Australia, July 2026. IEEE CS. <span class="badge">Acceptance 19%</span> <span class="rank rank-a" title="CORE conference ranking (ICORE2026)">CORE A</span></span>
+          <div class="links"><a href="papers/2026/OT_CT_ICWS_2026.pdf">PDF</a><a href="papers/2026/OT_CT_ICWS_2026.bib">BibTeX</a><a href="papers/2026/OT_CT_ICWS_2026_Slides.pdf">Slides</a></div>
         </div></li>
         <li class="pub" data-type="journal" id="j2"><span class="tag">J</span><div>
           <span class="title">A data-centric method for microservice identification: From data models analysis to source code assignment</span>
           <span class="authors"><u>Y. Romani</u>, <strong>O. Tibermacine</strong>, C. Tibermacine</span>
-          <span class="venue"><em>Information and Software Technology</em> (Elsevier), vol. 195, art. 108141, 2026.</span>
-          <div class="links"><a href="https://ctiber.github.io/papers/2026/YRetAl_IST_2026.pdf">PDF</a><a href="https://ctiber.github.io/papers/2026/YRetAl_IST_2026.bib">BibTeX</a><a href="https://doi.org/10.1016/j.infsof.2026.108141">DOI</a></div>
+          <span class="venue"><em>Information and Software Technology</em> (Elsevier), vol. 195, art. 108141, 2026. <span class="rank rank-a" title="CORE journal ranking (CORE2020)">CORE A</span> <span class="rank q1" title="Scopus quartile, best subject category (SCImago SJR)">Q1</span></span>
+          <div class="links"><a href="papers/2026/YRetAl_IST_2026.pdf">PDF</a><a href="papers/2026/YRetAl_IST_2026.bib">BibTeX</a><a href="https://doi.org/10.1016/j.infsof.2026.108141">DOI</a></div>
         </div></li>
       </ul></div>
 
@@ -539,7 +549,7 @@ footer {
         <li class="pub" data-type="journal"><span class="tag">J</span><div>
           <span class="title">Evaluation of FGSM variants with GradSwitch-MI-FGSM: A gradient-level channel switching approach</span>
           <span class="authors"><u>D. Benchaira</u>, <strong>O. Tibermacine</strong>, F. Cherif</span>
-          <span class="venue"><em>IEEE Access</em>, vol. 13, pp. 214562–214579, 2025.</span>
+          <span class="venue"><em>IEEE Access</em>, vol. 13, pp. 214562–214579, 2025. <span class="rank q1" title="Scopus quartile, best subject category (SCImago SJR)">Q1</span></span>
           <div class="links"><a href="https://doi.org/10.1109/ACCESS.2025.3645909">DOI</a></div>
         </div></li>
         <li class="pub" data-type="conference"><span class="tag">C</span><div>
@@ -559,7 +569,7 @@ footer {
         <li class="pub" data-type="journal"><span class="tag">J</span><div>
           <span class="title">High-capacity data hiding for medical images based on the mask-RCNN model</span>
           <span class="authors"><u>H. Saidi</u>, <strong>O. Tibermacine</strong>, A. Elhadad</span>
-          <span class="venue"><em>Scientific Reports</em> (Nature Portfolio), vol. 14, no. 1, art. 7166, 2024.</span>
+          <span class="venue"><em>Scientific Reports</em> (Nature Portfolio), vol. 14, no. 1, art. 7166, 2024. <span class="rank q1" title="Scopus quartile, best subject category (SCImago SJR)">Q1</span></span>
           <div class="links"><a href="https://doi.org/10.1038/s41598-024-55639-9">DOI</a></div>
         </div></li>
       </ul></div>
@@ -569,14 +579,14 @@ footer {
         <li class="pub" data-type="journal"><span class="tag">J</span><div>
           <span class="title">Heterogeneous IoT/LTE ProSe virtual infrastructure for disaster situations</span>
           <span class="authors"><u>S. Abdellatif</u>, <strong>O. Tibermacine</strong>, W. Bechkit, A. Bachir</span>
-          <span class="venue"><em>Journal of Network and Computer Applications</em> (Elsevier), vol. 213, art. 103602, 2023.</span>
+          <span class="venue"><em>Journal of Network and Computer Applications</em> (Elsevier), vol. 213, art. 103602, 2023. <span class="rank rank-a" title="CORE journal ranking (CORE2020)">CORE A</span> <span class="rank q1" title="Scopus quartile, best subject category (SCImago SJR)">Q1</span></span>
           <div class="links"><a href="https://doi.org/10.1016/j.jnca.2023.103602">DOI</a></div>
         </div></li>
         <li class="pub" data-type="journal"><span class="tag">J</span><div>
           <span class="title">A reputation assessment model for trustful service recommendation</span>
           <span class="authors"><strong>O. Tibermacine</strong>, C. Tibermacine, F. Cherif</span>
-          <span class="venue"><em>Computer Standards &amp; Interfaces</em> (Elsevier), vol. 84, art. 103701, 2023.</span>
-          <div class="links"><a href="https://ctiber.github.io/papers/2023/OTetAl_CSI_2023.pdf">PDF</a><a href="https://ctiber.github.io/papers/2023/OTetAl_CSI_2023.bib">BibTeX</a><a href="https://doi.org/10.1016/j.csi.2022.103701">DOI</a></div>
+          <span class="venue"><em>Computer Standards &amp; Interfaces</em> (Elsevier), vol. 84, art. 103701, 2023. <span class="rank rank-b" title="CORE journal ranking (CORE2020)">CORE B</span> <span class="rank q1" title="Scopus quartile, best subject category (SCImago SJR)">Q1</span></span>
+          <div class="links"><a href="papers/2023/OTetAl_CSI_2023.pdf">PDF</a><a href="papers/2023/OTetAl_CSI_2023.bib">BibTeX</a><a href="https://doi.org/10.1016/j.csi.2022.103701">DOI</a></div>
         </div></li>
         <li class="pub" data-type="other"><span class="tag">W</span><div>
           <span class="title">Data hiding in medical images using deep learning and LSB steganography</span>
@@ -590,13 +600,13 @@ footer {
         <li class="pub" data-type="conference"><span class="tag">C</span><div>
           <span class="title">Towards migrating legacy software systems to microservice-based architectures: A data-centric process for microservice identification</span>
           <span class="authors"><u>Y. Romani</u>, <strong>O. Tibermacine</strong>, C. Tibermacine</span>
-          <span class="venue"><em>19th IEEE International Conference on Software Architecture (ICSA 2022)</em>, New and Emerging Ideas Track, Honolulu, USA, 2022.</span>
-          <div class="links"><a href="https://ctiber.github.io/papers/2022/YRetAl_ICSA_NEI_2022.pdf">PDF</a><a href="https://ctiber.github.io/papers/2022/YRetAl_ICSA_NEI_2022.bib">BibTeX</a></div>
+          <span class="venue"><em>19th IEEE International Conference on Software Architecture (ICSA 2022)</em>, New and Emerging Ideas Track, Honolulu, USA, 2022. <span class="rank rank-a" title="CORE conference ranking (ICORE2026)">CORE A</span></span>
+          <div class="links"><a href="papers/2022/YRetAl_ICSA_NEI_2022.pdf">PDF</a><a href="papers/2022/YRetAl_ICSA_NEI_2022.bib">BibTeX</a></div>
         </div></li>
         <li class="pub" data-type="conference"><span class="tag">C</span><div>
           <span class="title">Leveraging predictability for global optimization of IoT networks</span>
           <span class="authors"><u>D. Benchaira</u>, <strong>O. Tibermacine</strong>, W. Bechkit, A. Bachir</span>
-          <span class="venue"><em>IEEE International Conference on Communications (ICC 2022)</em>, Seoul, Korea, pp. 3586–3591, 2022.</span>
+          <span class="venue"><em>IEEE International Conference on Communications (ICC 2022)</em>, Seoul, Korea, pp. 3586–3591, 2022. <span class="rank rank-b" title="CORE conference ranking (CORE2018)">CORE B</span></span>
         </div></li>
         <li class="pub" data-type="conference"><span class="tag">C</span><div>
           <span class="title">SAGA distributed transactions verification using Maude</span>
@@ -615,12 +625,12 @@ footer {
         <li class="pub" data-type="conference"><span class="tag">C</span><div>
           <span class="title">Efficient distributed D2D ProSe-based service discovery and querying in disaster situations</span>
           <span class="authors"><u>S. Abdellatif</u>, <strong>O. Tibermacine</strong>, W. Bechkit, A. Bachir</span>
-          <span class="venue"><em>International Conference on Advanced Information Networking and Applications (AINA 2020)</em>, Springer, pp. 910–921, 2020.</span>
+          <span class="venue"><em>International Conference on Advanced Information Networking and Applications (AINA 2020)</em>, Springer, pp. 910–921, 2020. <span class="rank rank-b" title="CORE conference ranking (ICORE2026)">CORE B</span></span>
         </div></li>
         <li class="pub" data-type="conference"><span class="tag">C</span><div>
           <span class="title">Service oriented D2D efficient communication for post-disaster management</span>
           <span class="authors"><u>S. Abdellatif</u>, <strong>O. Tibermacine</strong>, W. Bechkit, A. Bachir</span>
-          <span class="venue"><em>International Wireless Communications and Mobile Computing Conference (IWCMC 2020)</em>, Limassol, Cyprus, IEEE, pp. 970–975, 2020.</span>
+          <span class="venue"><em>International Wireless Communications and Mobile Computing Conference (IWCMC 2020)</em>, Limassol, Cyprus, IEEE, pp. 970–975, 2020. <span class="rank rank-b" title="CORE conference ranking (ICORE2026)">CORE B</span></span>
         </div></li>
       </ul></div>
 
@@ -629,8 +639,8 @@ footer {
         <li class="pub" data-type="conference"><span class="tag">C</span><div>
           <span class="title">Reputation evaluation with malicious feedback prevention using a HITS-based model</span>
           <span class="authors"><strong>O. Tibermacine</strong>, C. Tibermacine, M. L. Kerdoudi</span>
-          <span class="venue"><em>IEEE International Conference on Web Services (ICWS 2019)</em>, Milan, Italy, pp. 180–187, 2019. <span class="badge">Acceptance 20%</span></span>
-          <div class="links"><a href="https://ctiber.github.io/papers/2019/OTetAl_ICWS_2019.pdf">PDF</a><a href="https://ctiber.github.io/papers/2019/OTetAl_ICWS_2019.bib">BibTeX</a></div>
+          <span class="venue"><em>IEEE International Conference on Web Services (ICWS 2019)</em>, Milan, Italy, pp. 180–187, 2019. <span class="badge">Acceptance 20%</span> <span class="rank rank-a" title="CORE conference ranking (ICORE2026)">CORE A</span></span>
+          <div class="links"><a href="papers/2019/OTetAl_ICWS_2019.pdf">PDF</a><a href="papers/2019/OTetAl_ICWS_2019.bib">BibTeX</a></div>
         </div></li>
         <li class="pub" data-type="conference"><span class="tag">C</span><div>
           <span class="title">Sentiment analysis of Arabic Algerian dialect using a supervised method</span>
@@ -644,8 +654,8 @@ footer {
         <li class="pub" data-type="journal"><span class="tag">J</span><div>
           <span class="title">Estimating the reputation of newcomer web services using a regression-based method</span>
           <span class="authors"><strong>O. Tibermacine</strong>, C. Tibermacine, F. Cherif</span>
-          <span class="venue"><em>Journal of Systems and Software</em> (Elsevier), vol. 145, pp. 112–124, 2018.</span>
-          <div class="links"><a href="https://ctiber.github.io/papers/2018/OTetAl_JSS_2018.pdf">PDF</a><a href="https://ctiber.github.io/papers/2018/OTetAl_JSS_2018.bib">BibTeX</a><a href="https://doi.org/10.1016/j.jss.2018.08.026">DOI</a></div>
+          <span class="venue"><em>Journal of Systems and Software</em> (Elsevier), vol. 145, pp. 112–124, 2018. <span class="rank rank-a" title="CORE journal ranking (CORE2020)">CORE A</span> <span class="rank q1" title="Scopus quartile, best subject category (SCImago SJR)">Q1</span></span>
+          <div class="links"><a href="papers/2018/OTetAl_JSS_2018.pdf">PDF</a><a href="papers/2018/OTetAl_JSS_2018.bib">BibTeX</a><a href="https://doi.org/10.1016/j.jss.2018.08.026">DOI</a></div>
         </div></li>
         <li class="pub" data-type="conference"><span class="tag">C</span><div>
           <span class="title">Service discovery in the Internet of Things: A survey</span>
@@ -659,13 +669,13 @@ footer {
         <li class="pub" data-type="journal"><span class="tag">J</span><div>
           <span class="title">A process to identify relevant substitutes for healing failed WS-* orchestrations</span>
           <span class="authors"><strong>O. Tibermacine</strong>, C. Tibermacine, F. Cherif</span>
-          <span class="venue"><em>Journal of Systems and Software</em> (Elsevier), vol. 104, pp. 1–16, 2015.</span>
+          <span class="venue"><em>Journal of Systems and Software</em> (Elsevier), vol. 104, pp. 1–16, 2015. <span class="rank rank-a" title="CORE journal ranking (CORE2020)">CORE A</span> <span class="rank q1" title="Scopus quartile, best subject category (SCImago SJR)">Q1</span></span>
           <div class="links"><a href="https://doi.org/10.1016/j.jss.2015.02.028">DOI</a></div>
         </div></li>
         <li class="pub" data-type="conference"><span class="tag">C</span><div>
           <span class="title">Regression-based bootstrapping of web service reputation measurement</span>
           <span class="authors"><strong>O. Tibermacine</strong>, C. Tibermacine, F. Cherif</span>
-          <span class="venue"><em>IEEE International Conference on Web Services (ICWS 2015)</em>, Application Track, New York, USA, pp. 377–384, 2015.</span>
+          <span class="venue"><em>IEEE International Conference on Web Services (ICWS 2015)</em>, Application Track, New York, USA, pp. 377–384, 2015. <span class="rank rank-a" title="CORE conference ranking (ICORE2026)">CORE A</span></span>
         </div></li>
         <li class="pub" data-type="other"><span class="tag">T</span><div>
           <span class="title">Orchestration de Web Services fiables (Reliable web service orchestrations)</span>
@@ -680,7 +690,7 @@ footer {
           <span class="title">A practical approach to the measurement of similarity between WSDL-based web services</span>
           <span class="authors"><strong>O. Tibermacine</strong>, C. Tibermacine, F. Cherif</span>
           <span class="venue"><em>Revue des Nouvelles Technologies de l'Information</em>, RNTI-L-7, pp. 3–18. Selected papers from CAL.</span>
-          <div class="links"><a href="https://ctiber.github.io/papers/2014/OTetAl_RNTI_2014.pdf">PDF</a><a href="https://ctiber.github.io/papers/2014/OTetAl_RNTI_2014.bib">BibTeX</a></div>
+          <div class="links"><a href="papers/2014/OTetAl_RNTI_2014.pdf">PDF</a><a href="papers/2014/OTetAl_RNTI_2014.bib">BibTeX</a></div>
         </div></li>
       </ul></div>
 
@@ -690,7 +700,7 @@ footer {
           <span class="title">WSSim: A tool for the measurement of web service interface similarity</span>
           <span class="authors"><strong>O. Tibermacine</strong>, C. Tibermacine, F. Cherif</span>
           <span class="venue"><em>7e Conférence francophone sur les Architectures Logicielles (CAL 2013)</em>, Toulouse, France, May 2013.</span>
-          <div class="links"><a href="https://ctiber.github.io/papers/2013/OTetAl_CAL_2013.pdf">PDF</a><a href="https://ctiber.github.io/papers/2013/OTetAl_CAL_2013.bib">BibTeX</a></div>
+          <div class="links"><a href="papers/2013/OTetAl_CAL_2013.pdf">PDF</a><a href="papers/2013/OTetAl_CAL_2013.bib">BibTeX</a></div>
         </div></li>
         <li class="pub" data-type="journal"><span class="tag">J</span><div>
           <span class="title">DBpedia based factoid question answering system</span>
@@ -718,7 +728,7 @@ footer {
         </div></li>
       </ul></div>
 
-      <p class="note">PDFs linked here are preliminary versions hosted on <a href="https://ctiber.github.io/">Chouki Tibermacine's page</a>. Final versions are available from the publishers holding the copyright. Key: J journal, C conference, W workshop, B book chapter, T thesis.</p>
+      <p class="note">PDFs linked here are preliminary versions. Final versions are available from the publishers holding the copyright. Key: J journal, C conference, W workshop, B book chapter, T thesis.</p>
     </section>
 
     <!-- ===================== Supervision ===================== -->
