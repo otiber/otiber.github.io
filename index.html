@@ -10,9 +10,6 @@
 <meta property="og:title" content="Okba Tibermacine – Professor of Computer Science, ENSIA">
 <meta property="og:description" content="Building service-based and AI-enabled software whose behaviour can be trusted.">
 <meta property="og:type" content="profile">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
@@ -22,7 +19,6 @@
   "jobTitle": "Full Professor of Computer Science",
   "affiliation": {"@type": "CollegeOrUniversity", "name": "National School of Artificial Intelligence (ENSIA)", "address": "Algiers, Algeria"},
   "email": "mailto:okba.tibermacine@ensia.edu.dz",
-  "telephone": "+213556567263",
   "sameAs": [
     "https://orcid.org/0000-0001-7779-1232",
     "https://scholar.google.com/citations?user=MEUJ9kwAAAAJ",
@@ -34,45 +30,46 @@
 </script>
 
 <style>
+/* Fonts are self-hosted (fonts/), Inter variable, subsets: latin, latin-ext */
+@font-face { font-family: 'Inter'; font-style: italic; font-weight: 400 700; font-display: swap; src: url(fonts/inter-italic-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Inter'; font-style: italic; font-weight: 400 700; font-display: swap; src: url(fonts/inter-italic-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(fonts/inter-normal-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(fonts/inter-normal-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 :root {
-  --paper: #f4f6f7;
+  --paper: #ffffff;
   --surface: #ffffff;
-  --ink: #15242d;
-  --ink-soft: #4b5d68;
-  --rule: #d5dde1;
-  --teal: #1d6a73;
-  --teal-wash: #e0eef0;
-  --ochre: #a87a1f;
-  --ochre-wash: #f5ecd8;
-  --plum: #7a3b69;
-  --plum-wash: #f3e6ef;
-  --era-1: #7d93a3;
-  --era-2: #1d6a73;
-  --era-3: #5c8a5a;
-  --era-4: #a87a1f;
-  --era-5: #9b4d3f;
-  --serif: "Newsreader", Georgia, "Times New Roman", serif;
-  --sans: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --measure: 68ch;
+  --ink: #111827;
+  --ink-soft: #4b5563;
+  --rule: #e5e7eb;
+  --accent: #1a4f8b;
+  --accent-wash: #e8f0f9;
+  --alt: #475569;
+  --alt-wash: #eef1f5;
+  --era-1: #64748b;
+  --era-2: #1a4f8b;
+  --era-3: #0f766e;
+  --era-4: #3949ab;
+  --era-5: #b45309;
+  --serif: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --measure: 70ch;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --paper: #10181d;
-    --surface: #16222a;
-    --ink: #e4ebee;
-    --ink-soft: #9db0ba;
-    --rule: #2a3a44;
-    --teal: #6fb9c1;
-    --teal-wash: #1a3238;
-    --ochre: #d9ab55;
-    --ochre-wash: #2e2717;
-    --plum: #d29bc4;
-    --plum-wash: #33202e;
-    --era-1: #8ea5b5;
-    --era-2: #5fb0b8;
-    --era-3: #86b483;
-    --era-4: #d9ab55;
-    --era-5: #d07e6d;
+    --paper: #0d1117;
+    --surface: #161b22;
+    --ink: #e6edf3;
+    --ink-soft: #9aa7b4;
+    --rule: #30363d;
+    --accent: #7fb0ea;
+    --accent-wash: #172a45;
+    --alt: #94a3b8;
+    --alt-wash: #1e2733;
+    --era-1: #94a3b8;
+    --era-2: #7fb0ea;
+    --era-3: #7cc8bd;
+    --era-4: #a5b4fc;
+    --era-5: #fdba74;
   }
 }
 
@@ -85,14 +82,14 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--serif);
-  font-size: 1.125rem;
-  line-height: 1.6;
+  font-size: 1.0625rem;
+  line-height: 1.65;
   font-optical-sizing: auto;
 }
 
-a { color: var(--teal); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
 a:hover { text-decoration-thickness: 2px; }
-:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; border-radius: 2px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
 
 .skip { position: absolute; left: -9999px; }
 .skip:focus { left: 16px; top: 16px; background: var(--surface); padding: 8px 12px; z-index: 10; }
@@ -125,8 +122,8 @@ a:hover { text-decoration-thickness: 2px; }
   flex-shrink: 0;
   border-radius: 50%;
   object-fit: cover;
-  background: var(--teal-wash);
-  color: var(--teal);
+  background: var(--accent-wash);
+  color: var(--accent);
   display: grid; place-items: center;
   font-family: var(--serif);
   font-size: 2.6rem;
@@ -136,10 +133,10 @@ a:hover { text-decoration-thickness: 2px; }
 
 .identity h1 {
   font-family: var(--serif);
-  font-weight: 500;
-  font-size: 2rem;
-  line-height: 1.1;
-  letter-spacing: -0.015em;
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
   margin: 0 0 8px;
 }
 .role { color: var(--ink-soft); margin: 0; line-height: 1.45; }
@@ -154,7 +151,7 @@ a:hover { text-decoration-thickness: 2px; }
   border-left: 2px solid transparent;
 }
 .identity nav li a:hover { color: var(--ink); }
-.identity nav li a[aria-current="true"] { color: var(--ink); border-left-color: var(--teal); }
+.identity nav li a[aria-current="true"] { color: var(--ink); border-left-color: var(--accent); }
 
 .profiles { display: flex; flex-wrap: wrap; gap: 8px; }
 .profiles a {
@@ -166,7 +163,7 @@ a:hover { text-decoration-thickness: 2px; }
   text-decoration: none;
   font-size: 0.875rem;
 }
-.profiles a:hover { border-color: var(--teal); color: var(--teal); }
+.profiles a:hover { border-color: var(--accent); color: var(--accent); }
 .contact-line { color: var(--ink-soft); margin: 0; word-break: break-word; }
 
 main { padding: 56px 48px 96px 64px; min-width: 0; }
@@ -174,26 +171,26 @@ main { padding: 56px 48px 96px 64px; min-width: 0; }
 /* ---------- Hero ---------- */
 .hero { max-width: 44rem; padding-bottom: 48px; }
 .question {
-  font-size: clamp(2rem, 4.2vw, 3.25rem);
-  line-height: 1.12;
-  font-weight: 400;
-  letter-spacing: -0.02em;
+  font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.03em;
   margin: 0 0 28px;
   text-wrap: balance;
 }
-.question::before { content: "\201C"; color: var(--teal); margin-left: -0.45em; }
-.question::after { content: "\201D"; color: var(--teal); }
+.question::before { content: "\201C"; color: var(--accent); margin-left: -0.45em; }
+.question::after { content: "\201D"; color: var(--accent); }
 .hero p { max-width: var(--measure); margin: 0 0 1em; }
 
 /* ---------- Sections ---------- */
 section { padding: 56px 0 8px; border-top: 1px solid var(--rule); scroll-margin-top: 16px; }
 h2 {
-  font-weight: 500;
-  font-size: 1.75rem;
-  letter-spacing: -0.01em;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
   margin: 0 0 24px;
 }
-h3 { font-weight: 600; font-size: 1.1875rem; margin: 32px 0 12px; }
+h3 { font-weight: 600; font-size: 1.0625rem; margin: 32px 0 12px; }
 .lede { max-width: var(--measure); color: var(--ink-soft); margin: -12px 0 28px; }
 
 /* ---------- Trajectory band (the signature element) ---------- */
@@ -322,24 +319,20 @@ h3 { font-weight: 600; font-size: 1.1875rem; margin: 32px 0 12px; }
   height: fit-content;
   margin-top: 4px;
 }
-.pub[data-type="journal"] .tag { background: var(--teal-wash); color: var(--teal); }
-.pub[data-type="conference"] .tag { background: var(--ochre-wash); color: var(--ochre); }
+.pub[data-type="journal"] .tag { background: var(--accent-wash); color: var(--accent); }
+.pub[data-type="conference"] .tag { background: var(--alt-wash); color: var(--alt); }
 .pub[data-type="other"] .tag { background: transparent; color: var(--ink-soft); border: 1px solid var(--rule); }
-.pub .title { font-weight: 500; display: block; line-height: 1.35; }
-.pub .authors, .pub .venue { display: block; font-size: 1rem; color: var(--ink-soft); }
+.pub .title { font-weight: 600; display: block; line-height: 1.35; }
+.pub .authors, .pub .venue { display: block; font-size: 0.9375rem; color: var(--ink-soft); }
 .pub .authors strong { color: var(--ink); font-weight: 600; }
-.pub .authors u { text-decoration-color: var(--ochre); text-decoration-thickness: 1.5px; }
+.pub .authors u { text-decoration-color: var(--alt); text-decoration-thickness: 1.5px; }
 .pub .venue em { color: var(--ink); }
 .links { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 6px; font-family: var(--sans); font-size: 0.875rem; }
-.badge { font-family: var(--sans); font-size: 0.8125rem; color: var(--ochre); margin-left: 4px; white-space: nowrap; }
-.rank { display: inline-block; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.02em; padding: 1px 7px; margin-left: 4px; border-radius: 999px; border: 1px solid currentColor; white-space: nowrap; vertical-align: 1px; }
-.rank-astar { color: var(--surface); background: var(--teal); border-color: transparent; }
-.rank-a { color: var(--teal); background: var(--teal-wash); border-color: transparent; }
-.rank-b { color: var(--ochre); background: var(--ochre-wash); border-color: transparent; }
-.rank-c { color: var(--ink-soft); }
-.q1 { color: var(--plum); background: var(--plum-wash); border-color: transparent; }
-.q2 { color: var(--plum); }
-.q3, .q4 { color: var(--ink-soft); }
+.badge { font-family: var(--sans); font-size: 0.8125rem; color: var(--ink-soft); margin-left: 4px; white-space: nowrap; }
+/* Rankings: one neutral style; only A* is filled, A and Q1 slightly darker */
+.rank { display: inline-block; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.02em; padding: 1px 7px; margin-left: 4px; border-radius: 999px; border: 1px solid var(--rule); color: var(--ink-soft); white-space: nowrap; vertical-align: 1px; }
+.rank-astar { color: var(--paper); background: var(--ink); border-color: var(--ink); }
+.rank-a, .q1 { color: var(--ink); border-color: var(--ink-soft); }
 .pub[hidden], .year-group[hidden] { display: none; }
 .note { font-size: 0.9375rem; color: var(--ink-soft); max-width: var(--measure); margin-top: 20px; }
 
@@ -347,15 +340,15 @@ h3 { font-weight: 600; font-size: 1.1875rem; margin: 32px 0 12px; }
 .people { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; max-width: 54rem; }
 .people li { display: grid; grid-template-columns: 7.5rem 1fr; gap: 16px; }
 .people .when { font-family: var(--sans); font-size: 0.875rem; color: var(--ink-soft); padding-top: 3px; }
-.people .when.done { color: var(--teal); font-weight: 600; }
+.people .when.done { color: var(--accent); font-weight: 600; }
 .people .who { font-weight: 600; }
-.people .what { display: block; color: var(--ink-soft); font-size: 1rem; }
+.people .what { display: block; color: var(--ink-soft); font-size: 0.9375rem; }
 
 .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 8px 48px; max-width: 60rem; }
 .plain { padding-left: 1.1em; margin: 0; }
 .plain li { margin-bottom: 8px; }
-.plain li::marker { color: var(--teal); }
-.meta { color: var(--ink-soft); font-size: 1rem; }
+.plain li::marker { color: var(--accent); }
+.meta { color: var(--ink-soft); font-size: 0.9375rem; }
 
 footer {
   margin-top: 72px; padding-top: 24px;
@@ -374,12 +367,12 @@ footer {
   }
   .identity nav ul { display: flex; flex-wrap: wrap; gap: 4px 16px; }
   .identity nav li a { padding: 2px 0; border-left: 0; }
-  .identity nav li a[aria-current="true"] { text-decoration: underline; text-decoration-color: var(--teal); }
+  .identity nav li a[aria-current="true"] { text-decoration: underline; text-decoration-color: var(--accent); }
   .portrait { width: 104px; height: 104px; font-size: 2rem; }
   main { padding: 32px 16px 64px; }
 }
 @media (max-width: 640px) {
-  body { font-size: 1.0625rem; }
+  body { font-size: 1rem; }
   .trajectory { display: block; padding-top: 0; }
   .axis { display: none; }
   .era { margin-bottom: 8px; }
@@ -434,8 +427,7 @@ footer {
       <li><a href="https://www.linkedin.com/in/okba-tibermacine-1b1a1258/">LinkedIn</a></li>
     </ul>
 
-    <p class="contact-line"><a href="mailto:okba.tibermacine@ensia.edu.dz">okba.tibermacine@ensia.edu.dz</a><br>
-      <a href="tel:+213556567263">+213 556567263</a></p>
+    <p class="contact-line"><a href="mailto:okba.tibermacine@ensia.edu.dz">okba.tibermacine@ensia.edu.dz</a></p>
   </aside>
 
   <!-- ===================== Main column ===================== -->
@@ -498,7 +490,7 @@ footer {
         <li><time datetime="2026">2026</time><span>Our <a href="#j1">taxonomy of prompting strategies for LLM-based program repair</a> is out in the <em>Journal of Systems and Software</em>.</span></li>
         <li><time datetime="2026-07">2026</time><span><a href="#j2">Data-centric microservice identification</a> published in <em>Information and Software Technology</em>.</span></li>
         <li><time datetime="2025-07">Jul 2025</time><span>Promoted to Full Professor at ENSIA.</span></li>
-        <li><time datetime="2025-06">Jun 2025</time><span>Hadjer Saidi defends her PhD on medical data steganography using deep learning.</span></li>
+        <li><time datetime="2025-06">Jun 2025</time><span>Mme. Hadjer Saidi defends her PhD on medical data steganography using deep learning.</span></li>
       </ul>
     </section>
 
